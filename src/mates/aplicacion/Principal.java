@@ -3,6 +3,8 @@ package aplicacion;
 import java.util.Scanner;
 import matematicas.Matematicas;
 
+
+//CALCULAR DISTANCIAS
 public class Principal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

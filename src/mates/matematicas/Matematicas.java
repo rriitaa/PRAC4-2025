@@ -26,23 +26,24 @@ public class Matematicas{
         for (int j = 0; j <= m; j++) {
             dp[0][j] = j;
         }
-    
+
         // Rellenamos la tabla
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
+                //System.out.println("i:" + String.valueOf(i) + ", j:" + String.valueOf(j));
                 if (s1.charAt(i-1) == s2.charAt(j-1)) {
                     dp[i][j] = dp[i-1][j-1]; // No hay coste
                 } else {
                     dp[i][j] = Math.min(Math.min(
                                         dp[i-1][j] + 1, //eliminar
                                         dp[i][j-1] + 1), //insertar
-                                        dp[i-1][j-1] + 1); //sustituir
+                                        dp[i-1][j-1] + 2); //sustituir(porq es borrar y luego eliminar)
                 }
             }
         }
         //devolvemos el valor máximo
         //resultado final: ultima celda de la tabla
-        return dp[m][n];
+        return dp[n][m];
    
  }
  }
