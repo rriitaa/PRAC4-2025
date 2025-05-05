@@ -1,7 +1,7 @@
 package aplicacion;
 
-import Matematicas.Matematicas;
 import java.util.Scanner;
+import matematicas.Matematicas;
 
 public class Principal {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Principal {
         System.out.print("Introduce la segunda palabra: ");
         String palabra2 = sc.nextLine();
 
-        int distancia = matematicas.calcularDistancia(palabra1, palabra2);
+        int distancia = Matematicas.calcularDistancia(palabra1, palabra2);
 
         System.out.println("La distancia de edición entre \"" + palabra1 + "\" y \"" + palabra2 + "\" es: " + distancia);
     }
